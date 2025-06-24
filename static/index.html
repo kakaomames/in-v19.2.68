@@ -10,16 +10,16 @@
     <link rel="stylesheet" href="/assets/styles/main.css?v=8" />
     <link rel="stylesheet" href="/assets/styles/global.css?v=8" />
     <script>
-      // 初回アクセス時のみパスワード認証
+      // 初回アクセス時のみパスワード認証（localStorageを使用）
       window.addEventListener('DOMContentLoaded', function() {
-        if (sessionStorage.getItem("authenticated")) return;
+        if (localStorage.getItem("authenticated")) return;
         var pass = prompt("パスワードを入力してください");
         // ここでパスワードを設定（例: secret）
         if (pass !== "secret") {
           alert("パスワードが違います。ページを閉じます。");
           window.location.href = "about:blank";
         } else {
-          sessionStorage.setItem("authenticated", "1");
+          localStorage.setItem("authenticated", "1");
         }
       });
     </script>
