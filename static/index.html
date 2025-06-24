@@ -14,9 +14,8 @@
       window.addEventListener('DOMContentLoaded', function() {
         if (localStorage.getItem("authenticated")) return;
         var pass = prompt("パスワードを入力してください");
-        // ここでパスワードを設定（例: secret）
-        if (pass !== "MWQwbDB0Mmk1czF4MnMxeDVnOWg1cDJ6N3AycTV2NGQ4cDFmMWY0aDBwMWs4eTFjNHU3ZDZvMnA2bzNiMGE3YzhpMHQ2cTVqMnUwZzVlNnc3dDZhOHU2cTBRN2kzdzBkNGo0ZzhkN2QwenhnMWU0eTVjNWkwdzhw
-") {
+        // ここでパスワードを設定
+        if (pass !== "MWQwbDB0Mmk1czF4MnMxeDVnOWg1cDJ6N3AycTV2NGQ4cDFmMWY0aDBwMWs4eTFjNHU3ZDZvMnA2bzNiMGE3YzhpMHQ2cTVqMnUwZzVlNnc3dDZhOHU2cTBRN2kzdzBkNGo0ZzhkN2QwenhnMWU0eTVjNWkwdzhw") {
           alert("パスワードが違います。ページを閉じます。");
           window.location.href = "about:blank";
         } else {
